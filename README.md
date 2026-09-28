@@ -11,6 +11,10 @@ OAuth app that requests Gmail access can be published.
 | Home | `https://labs-infinitum.github.io/task-manager-ai-site/` |
 | Privacy policy | `https://labs-infinitum.github.io/task-manager-ai-site/privacy.html` |
 | Terms of service | `https://labs-infinitum.github.io/task-manager-ai-site/terms.html` |
+| Slack OAuth callback | `https://labs-infinitum.github.io/task-manager-ai-site/oauth/slack.html` |
 
 Plain static HTML and CSS, no build step. Edit a page and push to `main`; Pages redeploys automatically.
 If the app's data handling changes (new scopes, new processors), update `privacy.html` and its effective date.
+
+`oauth/slack.html` exists because Slack only redirects to HTTPS URLs: it forwards the one-time
+authorization code to the sign-in helper on `127.0.0.1:8767`, reached through an SSH tunnel.
