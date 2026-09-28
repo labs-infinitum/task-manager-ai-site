@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · task-manager-ai</title>
+  <meta name="description" content="How task-manager-ai accesses, uses, stores and shares Google user data.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="./">task-manager-ai</a>
+    <nav>
+      <a href="./">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective 28 September 2026</p>
+
+    <p>task-manager-ai (“the app”) is a personal, self-hosted tool operated by Infinitum Labs for the sole use of its operator. This policy explains what data the app accesses, how it is used, where it is stored and who it is shared with, including data received from Google APIs.</p>
+
+    <h2>Who can use the app</h2>
+    <p>Only the operator. The app has no public sign-up, and it only connects to Google accounts that belong to the operator and that the operator has explicitly authorized.</p>
+
+    <h2>Google user data the app accesses</h2>
+    <p>With the operator's consent, the app requests the <code>https://www.googleapis.com/auth/gmail.readonly</code> scope. It reads:</p>
+    <ul>
+      <li>message headers: sender, recipients, subject and date;</li>
+      <li>message bodies as plain text, and attachment file names (not attachment contents);</li>
+      <li>Gmail labels, for example to skip spam, promotions and social mail.</li>
+    </ul>
+    <p>The app cannot send, delete, modify or label email, and never does.</p>
+
+    <h2>How the data is used</h2>
+    <p>Google user data is used only to provide the app's single feature to the operator: working out which messages need the operator's attention and keeping the operator's own task tracker up to date. Specifically, the app:</p>
+    <ul>
+      <li>classifies new messages (for example: a request for the operator, a decision, a deadline, or no action needed);</li>
+      <li>creates or updates tasks and comments in the operator's self-hosted task tracker, with a link back to the original message;</li>
+      <li>writes a private digest for the operator.</li>
+    </ul>
+    <p>Google user data is not used for advertising, is not sold, and is not used to build user profiles for any other purpose.</p>
+
+    <h2>AI processing</h2>
+    <p>To classify and summarize messages, the relevant message content is sent to Anthropic's Claude models, which act as a processor for the operator solely to produce the classifications, summaries and task updates described above. task-manager-ai does not use Google user data to develop, improve or train generalized or non-personalized AI or machine-learning models.</p>
+
+    <h2>Where the data is stored</h2>
+    <ul>
+      <li>Message data is stored in a database on the operator's own server, with access restricted to the operator's account.</li>
+      <li>OAuth refresh tokens are stored on the same server in files readable only by the operator's account.</li>
+      <li>Tasks, comments and digests derived from messages are stored in the operator's self-hosted task tracker.</li>
+    </ul>
+
+    <h2>Sharing</h2>
+    <p>Google user data is not shared with, transferred to or sold to anyone, except:</p>
+    <ul>
+      <li>Anthropic, as described under “AI processing”, only to provide the feature to the operator;</li>
+      <li>where required by law.</li>
+    </ul>
+    <p>No human other than the operator reads the data.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Data is kept on the operator's server until the operator deletes it. The operator can stop all access at any time by revoking the app at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After access is revoked, the app can no longer read any new email, and the stored data can be deleted on request.</p>
+
+    <h2>Limited Use</h2>
+    <div class="card">
+      <p>task-manager-ai's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </div>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions or deletion requests: <a href="mailto:contact@infinitum.consulting">contact@infinitum.consulting</a></p>
+  </main>
+  <footer>© 2026 Infinitum Labs · <a href="./">Home</a> · <a href="terms.html">Terms</a></footer>
+</body>
+</html>
