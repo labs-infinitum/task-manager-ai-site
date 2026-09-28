@@ -18,7 +18,7 @@
   </header>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective 28 September 2026</p>
+    <p class="meta">Effective 28 September 2026 · updated 28 September 2026 (Google Meet files)</p>
 
     <p>task-manager-ai (“the app”) is a personal, self-hosted tool operated by Infinitum Labs for the sole use of its operator. This policy explains what data the app accesses, how it is used, where it is stored and who it is shared with, including data received from Google APIs.</p>
 
@@ -26,16 +26,15 @@
     <p>Only the operator. The app has no public sign-up, and it only connects to Google accounts that belong to the operator and that the operator has explicitly authorized.</p>
 
     <h2>Google user data the app accesses</h2>
-    <p>With the operator's consent, the app requests the <code>https://www.googleapis.com/auth/gmail.readonly</code> scope. It reads:</p>
+    <p>With the operator's consent, the app requests these scopes:</p>
     <ul>
-      <li>message headers: sender, recipients, subject and date;</li>
-      <li>message bodies as plain text, and attachment file names (not attachment contents);</li>
-      <li>Gmail labels, for example to skip spam, promotions and social mail.</li>
+      <li><code>https://www.googleapis.com/auth/gmail.readonly</code>: message headers (sender, recipients, subject, date), message bodies as plain text, attachment file names (not attachment contents), and Gmail labels, for example to skip spam, promotions and social mail.</li>
+      <li><code>https://www.googleapis.com/auth/drive.meet.readonly</code>, only on accounts where the operator enables it: Google Drive files created by Google Meet, i.e. meeting transcripts and “Notes by Gemini” documents, read as plain text with their title, owner and creation time. No other Drive files are visible to the app.</li>
     </ul>
-    <p>The app cannot send, delete, modify or label email, and never does.</p>
+    <p>The app cannot send, delete, modify or label email, and cannot create, change or delete Drive files. It never does.</p>
 
     <h2>How the data is used</h2>
-    <p>Google user data is used only to provide the app's single feature to the operator: working out which messages need the operator's attention and keeping the operator's own task tracker up to date. Specifically, the app:</p>
+    <p>Google user data is used only to provide the app's single feature to the operator: working out which messages and meeting action items need the operator's attention and keeping the operator's own task tracker up to date. Specifically, the app:</p>
     <ul>
       <li>classifies new messages (for example: a request for the operator, a decision, a deadline, or no action needed);</li>
       <li>creates or updates tasks and comments in the operator's self-hosted task tracker, with a link back to the original message;</li>
