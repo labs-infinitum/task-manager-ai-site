@@ -18,7 +18,7 @@
   </header>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective 28 September 2026 · updated 28 September 2026 (Google Meet files)</p>
+    <p class="meta">Effective 28 September 2026 · updated 29 September 2026 (Google Meet files, Notion)</p>
 
     <p>task-manager-ai (“the app”) is a personal, self-hosted tool operated by Infinitum Labs for the sole use of its operator. This policy explains what data the app accesses, how it is used, where it is stored and who it is shared with, including data received from Google APIs.</p>
 
@@ -32,6 +32,9 @@
       <li><code>https://www.googleapis.com/auth/drive.meet.readonly</code>, only on accounts where the operator enables it: Google Drive files created by Google Meet, i.e. meeting transcripts and “Notes by Gemini” documents, read as plain text with their title, owner and creation time. No other Drive files are visible to the app.</li>
     </ul>
     <p>The app cannot send, delete, modify or label email, and cannot create, change or delete Drive files. It never does.</p>
+
+    <h2>Notion data</h2>
+    <p>The operator may also connect Notion workspaces they belong to through Notion's OAuth consent screen, choosing which pages the app can see. The app requests only <em>read content</em>, <em>read comments</em> and <em>read user information</em>; it cannot create, edit or delete anything in Notion. It reads the shared pages, their comments and property values to find mentions of the operator and changes to task databases, and stores them in the same way as the Google data described below.</p>
 
     <h2>How the data is used</h2>
     <p>Google user data is used only to provide the app's single feature to the operator: working out which messages and meeting action items need the operator's attention and keeping the operator's own task tracker up to date. Specifically, the app:</p>

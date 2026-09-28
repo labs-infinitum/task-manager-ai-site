@@ -12,6 +12,7 @@ OAuth app that requests Gmail access can be published.
 | Privacy policy | `https://labs-infinitum.github.io/task-manager-ai-site/privacy.html` |
 | Terms of service | `https://labs-infinitum.github.io/task-manager-ai-site/terms.html` |
 | Slack OAuth callback | `https://labs-infinitum.github.io/task-manager-ai-site/oauth/slack.html` |
+| Notion OAuth callback | `https://labs-infinitum.github.io/task-manager-ai-site/oauth/notion.html` |
 
 Plain static HTML and CSS, no build step. Edit a page and push to `main`; Pages redeploys automatically.
 If the app's data handling changes (new scopes, new processors), update `privacy.html` and its effective date.

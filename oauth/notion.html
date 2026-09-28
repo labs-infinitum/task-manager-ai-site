@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Notion sign-in · task-manager-ai</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="../">task-manager-ai</a>
+  </header>
+  <main>
+    <h1>Finishing Notion sign-in</h1>
+    <p class="lede" id="status">Handing the sign-in back to task-manager-ai…</p>
+    <p id="manual" hidden>If nothing happens, check that the <code>ssh -L 8768:…</code> tunnel from the sign-in command is still open, then <a id="continue" href="#">continue here</a>.</p>
+  </main>
+  <script>
+    // Notion only redirects to HTTPS pages, so it sends the one-time code here and this page
+    // forwards it to the sign-in helper listening on 127.0.0.1:8768 (reached through an SSH
+    // tunnel). The code is useless without the app's client secret, which never leaves the
+    // operator's server. Nothing is stored or sent anywhere else.
+    (function () {
+      var q = window.location.search;
+      var status = document.getElementById("status");
+      if (!/[?&](code|error)=/.test(q)) {
+        status.textContent = "This page is only used during Notion sign-in.";
+        return;
+      }
+      var target = "http://127.0.0.1:8768/notion/callback" + q;
+      document.getElementById("continue").href = target;
+      document.getElementById("manual").hidden = false;
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
